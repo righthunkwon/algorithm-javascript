@@ -1,5 +1,5 @@
 // https://nyang-in.tistory.com/156
-// vscode   : testcase.txt
+// vscode   : ../testcase.txt
 // baekjoon : /dev/stdin
 
 // 한 줄 입력
