@@ -4,8 +4,8 @@
 
 // 한 줄 입력
 const fs = require('fs');
-const input = fs.readFileSync('/dev/stdin').toString().split(' ');
+const input = fs.readFileSync('/dev/stdin').toString().trim().split(' ');
 
 // 여러 줄 입력
 const fs = require('fs');
-const inputs = fs.readFileSync('/dev/stdin').toString().split('\n');
+const inputs = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
