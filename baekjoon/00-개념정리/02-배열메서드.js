@@ -31,3 +31,11 @@ console.log(sum); // 10
 const initVal = 10;
 const sumWithInitVal = arr3.reduce((acc, cur) => acc + cur, initVal);
 console.log(sumWithInitVal); // 20
+
+////////////////////////////////////////////////////////////////////////
+// filter()
+// 배열에서 제공된 함수의 조건을 만족하는 요소를 필터링해서 배열의 복사본 생성
+const arr4 = ['apple', 'melon', 'orange', 'watermelon', 'strawberry'];
+const arr5 = arr4.filter((item) => item.length > 6);
+console.log(arr4); // ['apple', 'melon', 'orange', 'watermelon', 'strawberry']
+console.log(arr5); // ['watermelon', 'strawberry']
