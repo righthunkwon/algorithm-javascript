@@ -8,6 +8,9 @@ const arr1 = ['Fire', 'Air', 'Water'];
 console.log(arr1.join()); // "Fire,Air,Water"
 console.log(arr1.join('')); // "FireAirWater"
 console.log(arr1.join('-')); // "Fire-Air-Water"
+console.log(arr1.join('\n')); // "Fire
+////////////////////////////////  Air
+////////////////////////////////  Water"
 
 ////////////////////////////////////////////////////////////////////////
 // reverse()
