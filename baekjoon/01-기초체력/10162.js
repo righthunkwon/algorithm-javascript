@@ -6,4 +6,5 @@ arr.forEach((elm) => {
   answer += Math.floor(input / elm) + ' ';
   input %= elm;
 });
+if (input !== 0) answer = -1;
 console.log(answer);
