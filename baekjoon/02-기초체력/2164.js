@@ -13,7 +13,7 @@ class LinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
-    this._size = 0;
+    this.length = 0;
   }
 
   /**
@@ -26,12 +26,12 @@ class LinkedList {
   }
 
   /**
-   * @getSize
+   * @getLength
    * 현재 LinkedList의 길이 반환
    *
    */
-  getSize() {
-    return this._size;
+  getLength() {
+    return this.length;
   }
 
   /**
@@ -50,7 +50,7 @@ class LinkedList {
     }
 
     this.tail = newNode;
-    this._size++;
+    this.length++;
 
     return newNode;
   }
@@ -63,6 +63,25 @@ class LinkedList {
   shift() {
     this.head = this.head.next;
     this.head.prev = null;
-    this._size--;
+    this.length--;
   }
 }
+
+const linkedList = new LinkedList();
+
+for (let i = 1; i <= input; i++) {
+  linkedList.push(i);
+}
+
+while (true) {
+  // 종료조건
+  if (linkedList.getLength() <= 1) {
+    break;
+  }
+
+  // 반복수행
+  linkedList.shift();
+  linkedList.push(linkedList.getHead());
+  linkedList.shift();
+}
+console.log(linkedList.getHead());

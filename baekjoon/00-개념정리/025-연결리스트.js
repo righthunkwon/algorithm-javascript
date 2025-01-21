@@ -6,7 +6,7 @@
  *
  * - 단일 연결 리스트 : 각 노드는 다음 노드를 가리키는 하나의 포인터만을 가짐
  * - 이중 연결 리스트 : 각 노드는 이전 노드와 다음 노드를 가리키는 두 개의 포인터를 가짐
- * - 원형 연결 리스트 : 이전과 다음 두 개의 포인터를 가지면서 마지막 노드의 포인터가 첫 노드나 특정 노드를 가리킴
+ * - 원형 연결 리스트 : 이전과 다음 두 개의 포인터를 가지면서 마지막 노드의 포인터가 첫 노드나 특정 노드를 가리킴d
  *
  */
 
@@ -22,7 +22,7 @@ class LinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
-    this._size = 0;
+    this.length = 0;
   }
 
   /**
@@ -35,12 +35,12 @@ class LinkedList {
   }
 
   /**
-   * @getSize
+   * @getLength
    * 현재 LinkedList의 길이 반환
    *
    */
-  getSize() {
-    return this._size;
+  getLength() {
+    return this.length;
   }
 
   /**
@@ -59,7 +59,7 @@ class LinkedList {
     }
 
     this.tail = newNode;
-    this._size++;
+    this.length++;
 
     return newNode;
   }
@@ -72,6 +72,6 @@ class LinkedList {
   shift() {
     this.head = this.head.next;
     this.head.prev = null;
-    this._size--;
+    this.length--;
   }
 }
